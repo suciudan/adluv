@@ -208,7 +208,7 @@ __metadata:
     tesseract.js: "npm:7.0.0"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.8.2"
-    youtubei.js: "npm:17.0.1"
+    youtubei.js: "npm:18.0.0"
   languageName: unknown
   linkType: soft
 
@@ -4993,6 +4993,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fflate@npm:^0.8.2":
+  version: 0.8.3
+  resolution: "fflate@npm:0.8.3"
+  checksum: 10c0/eab181ca37f5348ae76d4b6f840e0026e30220e33153289ac942222d8b9638237d486507dbcc09878d724095bd354993a2ee48bbee99c8f2c6440d4448719aa7
+  languageName: node
+  linkType: hard
+
 "ffmpeg-static@npm:^5.2.0":
   version: 5.3.0
   resolution: "ffmpeg-static@npm:5.3.0"
@@ -6436,10 +6443,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"meriyah@npm:^6.1.4":
-  version: 6.1.4
-  resolution: "meriyah@npm:6.1.4"
-  checksum: 10c0/d792a12df453b9e86c2bb70e73adf41b2d0fa88125381143e4d339d309ddcbb7aeb108e286411dcb19be82539d29b881279c613ae03ce514b7c296c72e9a8d00
+"meriyah@npm:^7.3.1":
+  version: 7.3.3
+  resolution: "meriyah@npm:7.3.3"
+  checksum: 10c0/6c3e1b78a509a2e7487665c43ebe80e28dad72a283e1e6d8e061ca4c4718a622ada6f0d1ff6705047d166f6f9f0f7c84d573b4d4ad0e3e4d421f0626e0d228ce
   languageName: node
   linkType: hard
 
@@ -9139,13 +9146,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"youtubei.js@npm:17.0.1":
-  version: 17.0.1
-  resolution: "youtubei.js@npm:17.0.1"
+"youtubei.js@npm:18.0.0":
+  version: 18.0.0
+  resolution: "youtubei.js@npm:18.0.0"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
-    meriyah: "npm:^6.1.4"
-  checksum: 10c0/18b188d9a706feca6b6a23582c00b3fdb955a1be823854b9c4b0312ccf7c3539db28a78184fb4927289388e363d5594f39df63e7253874b39317077309088d98
+    fflate: "npm:^0.8.2"
+    meriyah: "npm:^7.3.1"
+  checksum: 10c0/cd43fc79646f66ca5f3f1f95f55721c8d1eb9cb2b0973cc0133a7bd93a123d442207e0a505e2aff3af8a6d98681a209aab307835aec40269917d3f992ea153b5
   languageName: node
   linkType: hard
 
