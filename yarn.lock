@@ -21,7 +21,7 @@ __metadata:
     better-auth: "npm:~1.6.33"
     eslint: "npm:^9.31.0"
     eslint-config-next: "npm:16.3.5"
-    lucide-react: "npm:^0.525.0"
+    lucide-react: "npm:^1.45.0"
     motion: "npm:^13.2.0"
     next: "npm:16.3.5"
     posthog-js: "npm:^1.372.10"
@@ -75,8 +75,8 @@ __metadata:
     better-auth: "npm:~1.6.33"
     eslint: "npm:^9.31.0"
     eslint-config-next: "npm:16.3.5"
-    lucide-react: "npm:^0.525.0"
-    marked: "npm:^17.0.5"
+    lucide-react: "npm:^1.45.0"
+    marked: "npm:^18.0.12"
     next: "npm:16.3.5"
     next-mdx-remote: "npm:^6.0.0"
     react: "npm:19.3.0"
@@ -132,8 +132,8 @@ __metadata:
   dependencies:
     "@adluv/config": "workspace:*"
     "@types/node": "npm:^24.3.0"
-    http-proxy-agent: "npm:^7.0.2"
-    https-proxy-agent: "npm:^7.0.1"
+    http-proxy-agent: "npm:^9.1.0"
+    https-proxy-agent: "npm:^9.1.0"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.8.2"
   languageName: unknown
@@ -155,7 +155,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     eslint: "npm:^9.31.0"
     eslint-config-next: "npm:16.3.5"
-    lucide-react: "npm:^0.525.0"
+    lucide-react: "npm:^1.45.0"
     motion: "npm:^13.2.0"
     next: "npm:16.3.5"
     next-mdx-remote: "npm:^6.0.0"
@@ -171,8 +171,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@adluv/source-adapters@workspace:packages/source-adapters"
   dependencies:
-    http-proxy-agent: "npm:^7.0.2"
-    https-proxy-agent: "npm:^7.0.1"
+    http-proxy-agent: "npm:^9.1.0"
+    https-proxy-agent: "npm:^9.1.0"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.8.2"
     zod: "npm:^4.1.11"
@@ -201,14 +201,14 @@ __metadata:
     "@aws-sdk/client-s3": "npm:^3.1026.0"
     "@types/node": "npm:^24.3.0"
     ffmpeg-static: "npm:^5.2.0"
-    http-proxy-agent: "npm:^7.0.2"
-    https-proxy-agent: "npm:^7.0.6"
+    http-proxy-agent: "npm:^9.1.0"
+    https-proxy-agent: "npm:^9.1.0"
     playwright: "npm:^1.51.1"
     sharp: "npm:^0.35.4"
     tesseract.js: "npm:7.0.0"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.8.2"
-    youtubei.js: "npm:17.0.1"
+    youtubei.js: "npm:18.0.0"
   languageName: unknown
   linkType: soft
 
@@ -3184,10 +3184,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agent-base@npm:^7.1.0, agent-base@npm:^7.1.2":
-  version: 7.1.4
-  resolution: "agent-base@npm:7.1.4"
-  checksum: 10c0/c2c9ab7599692d594b6a161559ada307b7a624fa4c7b03e3afdb5a5e31cd0e53269115b620fcab024c5ac6a6f37fa5eb2e004f076ad30f5f7e6b8b671f7b35fe
+"agent-base@npm:9.0.0":
+  version: 9.0.0
+  resolution: "agent-base@npm:9.0.0"
+  checksum: 10c0/0274cd9a2a0ee78e3fbe0e80e7e0c41df27102466f7f7b3a67c045bb4c00fc517ce0496de3045b55f5eeec1a0e77d9d0a9b9320b0362bfe61e0c9e6d7ebaee76
   languageName: node
   linkType: hard
 
@@ -4993,6 +4993,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fflate@npm:^0.8.2":
+  version: 0.8.3
+  resolution: "fflate@npm:0.8.3"
+  checksum: 10c0/eab181ca37f5348ae76d4b6f840e0026e30220e33153289ac942222d8b9638237d486507dbcc09878d724095bd354993a2ee48bbee99c8f2c6440d4448719aa7
+  languageName: node
+  linkType: hard
+
 "ffmpeg-static@npm:^5.2.0":
   version: 5.3.0
   resolution: "ffmpeg-static@npm:5.3.0"
@@ -5387,13 +5394,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-proxy-agent@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "http-proxy-agent@npm:7.0.2"
+"http-proxy-agent@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "http-proxy-agent@npm:9.1.0"
   dependencies:
-    agent-base: "npm:^7.1.0"
+    agent-base: "npm:9.0.0"
     debug: "npm:^4.3.4"
-  checksum: 10c0/4207b06a4580fb85dd6dff521f0abf6db517489e70863dca1a0291daa7f2d3d2d6015a57bd702af068ea5cf9f1f6ff72314f5f5b4228d299c0904135d2aef921
+    proxy-agent-negotiate: "npm:1.1.0"
+  checksum: 10c0/1dff8eaef76b154545c1a7492fa01305dda393efba53d894f5fc45992d711fa4036bdc64a61e0bc76bb7531513a4f8ddcccdf81d1476ddcc9cbf621735d397e4
   languageName: node
   linkType: hard
 
@@ -5416,13 +5424,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"https-proxy-agent@npm:^7.0.1, https-proxy-agent@npm:^7.0.6":
-  version: 7.0.6
-  resolution: "https-proxy-agent@npm:7.0.6"
+"https-proxy-agent@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "https-proxy-agent@npm:9.1.0"
   dependencies:
-    agent-base: "npm:^7.1.2"
-    debug: "npm:4"
-  checksum: 10c0/f729219bc735edb621fa30e6e84e60ee5d00802b8247aac0d7b79b0bd6d4b3294737a337b93b86a0bd9e68099d031858a39260c976dc14cdbba238ba1f8779ac
+    agent-base: "npm:9.0.0"
+    debug: "npm:^4.3.4"
+    proxy-agent-negotiate: "npm:1.1.0"
+  checksum: 10c0/95ca9504944e0b6d214f9da0b4d747512bf79187b4c6f69db667049bdcc43e2b67c7932ad2c4bd6952e99e83de9a7d42dafff63672d7898da297b2736f4b42bd
   languageName: node
   linkType: hard
 
@@ -6158,12 +6167,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.525.0":
-  version: 0.525.0
-  resolution: "lucide-react@npm:0.525.0"
+"lucide-react@npm:^1.45.0":
+  version: 1.45.0
+  resolution: "lucide-react@npm:1.45.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/81c4438e2cf1c86ea2ebe0a97b378201512450894283cccce766a89bc6a4e47c8df1d9115d845d98f582bb0a10be31c454aa232520fea35018dac1cd8466ea9b
+  checksum: 10c0/5e4e0d4170bd9318b636ab71df8a5ab6fe4b36687882223c1289e92e898f913eb5f3f4959db1e0fa865e4d9da0f5107d9c0dcaad99f84412192e606c1d7ff0a3
   languageName: node
   linkType: hard
 
@@ -6190,12 +6199,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^17.0.5":
-  version: 17.0.6
-  resolution: "marked@npm:17.0.6"
+"marked@npm:^18.0.12":
+  version: 18.0.12
+  resolution: "marked@npm:18.0.12"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/77961fbb360511d6638491e097cb15b1ef5e643f27c25b9cd52aa3cd92e216fc3cda7dbfc6a10adb7922d1b38df132510df65de4afe6c53c7280772c9d4221bd
+  checksum: 10c0/16cee41cc0bbed129d79997841252eec6842137f877a8cc061443b9d9b6583065a91f636b55c49c3744eee886ca93063d59dc37907442919147b8b98b5a3c91b
   languageName: node
   linkType: hard
 
@@ -6436,10 +6445,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"meriyah@npm:^6.1.4":
-  version: 6.1.4
-  resolution: "meriyah@npm:6.1.4"
-  checksum: 10c0/d792a12df453b9e86c2bb70e73adf41b2d0fa88125381143e4d339d309ddcbb7aeb108e286411dcb19be82539d29b881279c613ae03ce514b7c296c72e9a8d00
+"meriyah@npm:^7.3.1":
+  version: 7.3.3
+  resolution: "meriyah@npm:7.3.3"
+  checksum: 10c0/6c3e1b78a509a2e7487665c43ebe80e28dad72a283e1e6d8e061ca4c4718a622ada6f0d1ff6705047d166f6f9f0f7c84d573b4d4ad0e3e4d421f0626e0d228ce
   languageName: node
   linkType: hard
 
@@ -7662,6 +7671,18 @@ __metadata:
     prosemirror-state: "npm:^1.0.0"
     prosemirror-transform: "npm:^1.1.0"
   checksum: 10c0/42fb27a28378ff843468caa1b99ecf9a74b3b170b25b7009954bcaa11379f6aa10e885c44fa29fe8dd2d892904890ade47952e61acc1512bda4dc926eb2a1bd9
+  languageName: node
+  linkType: hard
+
+"proxy-agent-negotiate@npm:1.1.0":
+  version: 1.1.0
+  resolution: "proxy-agent-negotiate@npm:1.1.0"
+  peerDependencies:
+    kerberos: ^2.0.0
+  peerDependenciesMeta:
+    kerberos:
+      optional: true
+  checksum: 10c0/e1c89e46b739a790335555c8182ed919f6fa16ca244cd4c01a9806a1c471af785b3beff8bd8a891422bedfffb0f43115333d98ad426f9bc82e7cd20c6a15ceb0
   languageName: node
   linkType: hard
 
@@ -9139,13 +9160,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"youtubei.js@npm:17.0.1":
-  version: 17.0.1
-  resolution: "youtubei.js@npm:17.0.1"
+"youtubei.js@npm:18.0.0":
+  version: 18.0.0
+  resolution: "youtubei.js@npm:18.0.0"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
-    meriyah: "npm:^6.1.4"
-  checksum: 10c0/18b188d9a706feca6b6a23582c00b3fdb955a1be823854b9c4b0312ccf7c3539db28a78184fb4927289388e363d5594f39df63e7253874b39317077309088d98
+    fflate: "npm:^0.8.2"
+    meriyah: "npm:^7.3.1"
+  checksum: 10c0/cd43fc79646f66ca5f3f1f95f55721c8d1eb9cb2b0973cc0133a7bd93a123d442207e0a505e2aff3af8a6d98681a209aab307835aec40269917d3f992ea153b5
   languageName: node
   linkType: hard
 

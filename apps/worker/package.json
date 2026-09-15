@@ -43,13 +43,13 @@
     "@adluv/source-adapters": "workspace:*",
     "@aws-sdk/client-s3": "^3.1026.0",
     "ffmpeg-static": "^5.2.0",
-    "http-proxy-agent": "^7.0.2",
-    "https-proxy-agent": "^7.0.6",
+    "http-proxy-agent": "^9.1.0",
+    "https-proxy-agent": "^9.1.0",
     "playwright": "^1.51.1",
     "sharp": "^0.35.4",
     "tesseract.js": "7.0.0",
     "tsx": "^4.20.5",
-    "youtubei.js": "17.0.1"
+    "youtubei.js": "18.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
