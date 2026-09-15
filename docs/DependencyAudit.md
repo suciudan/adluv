@@ -17,11 +17,25 @@ The esbuild issue affects its own development server: another website can read r
 
 ## Compatibility choices
 
-The lockfile includes Next.js and `eslint-config-next` 16.3.5, React and React DOM 19.2.8, Drizzle ORM 0.45.2, `next-mdx-remote` 6.0.0, and Sharp 0.35.4.
+The lockfile includes Next.js and `eslint-config-next` 16.3.5, React and React DOM 19.3.0, Motion 13.2.0, Drizzle ORM 0.45.2, `next-mdx-remote` 6.0.0, and Sharp 0.35.4.
 
 Better Auth is constrained to **`~1.6.33`**. The application currently uses its legacy `mcp` plugin and OAuth database tables; Better Auth 1.7 removes that plugin. Updating to 1.7 requires an explicit migration to the newer OAuth provider with database and login-flow validation. The selected 1.6 release includes the [refresh-token authentication fix](https://github.com/advisories/GHSA-pw9m-5jxm-xr6h), and the registry audit reports no current Better Auth findings for it.
 
 All workspace packages remain `private: true` to prevent accidental npm publication. The original project code uses the MIT license. Dependencies and redistributed assets retain their own licenses; see [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+
+## Automated update policy
+
+Dependabot groups React with React DOM and their types because the runtime packages must have matching versions. A React DOM-only update to 19.3.0 failed the existing server-rendering tests with React 19.2.8; updating both together resolves that failure. Next.js and its lint configuration are also grouped, as are GitHub Actions updates.
+
+Routine version updates have three constraints in [.github/dependabot.yml](../.github/dependabot.yml):
+
+| Dependency | Supported line | Requirement before lifting the constraint |
+| --- | --- | --- |
+| `@types/node` | 24.x (24.13.4 currently) | Upgrade the Node 24 runtime contract in `.nvmrc`, `package.json`, deployment documentation, and CI together. Node 26 declarations can expose APIs absent from the supported runtime. |
+| `eslint` | 9.x (9.39.5 currently) | Wait for compatible Next.js React and accessibility plugins, then rerun the full lint suite. ESLint 10.10.0 currently crashes in `react/display-name` because the plugin calls the removed `context.getFilename()` API. Track [eslint-plugin-react #3977](https://github.com/jsx-eslint/eslint-plugin-react/issues/3977). |
+| `better-auth` | 1.6.x (1.6.33 currently) | Follow the [1.7 migration guide](https://better-auth.com/docs/guides/1-7-upgrade-guide), replace the removed MCP plugin and legacy OAuth tables/endpoints, and verify provisioning, sign-in, consent, token exchange, and existing-data migration. The unmodified 1.7.4 update crashes on `mcp()` during app tests. |
+
+These constraints use semantic update types instead of excluding vulnerable version ranges. Compatible patch updates continue, and [Dependabot security updates can still propose the minimum patched version](https://github.blog/changelog/2021-05-21-dependabot-version-updates-can-now-ignore-major-minor-patch-releases/). Any security fix that crosses a compatibility boundary still requires its associated migration and tests. The audit and alerts remain enabled, including the existing esbuild advisory.
 
 ## Reproduce
 
