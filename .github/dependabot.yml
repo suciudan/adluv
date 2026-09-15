@@ -5,8 +5,34 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      next:
+        patterns:
+          - next
+          - eslint-config-next
+    # Keep routine updates within supported lines; security updates remain enabled.
+    # See docs/DependencyAudit.md before removing these temporary constraints.
+    ignore:
+      - dependency-name: "@types/node"
+        # Runtime is Node 24 in .nvmrc and package.json.
+        update-types: ["version-update:semver-major"]
+      - dependency-name: eslint
+        # Next's React and accessibility plugins do not support ESLint 10 yet.
+        update-types: ["version-update:semver-major"]
+      - dependency-name: better-auth
+        # Moving beyond 1.6 requires the MCP/OAuth and database migration.
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns: ["*"]
