@@ -1,5 +1,9 @@
 # AdLuv
 
+[![AdLuv](docs/assets/adluv-readme-thumbnail.png)](https://adluv.co/)
+
+[Website](https://adluv.co/)
+
 Ad intelligence for discovering, tracking, and organizing ads across LinkedIn, Meta, and Google. AdLuv brings advertiser search, creative archives, saved collections, change alerts, landing-page captures, and MCP access into one TypeScript monorepo.
 
 This repository contains the application source for running your own instance. Accounts are provisioned by an operator; public signup and checkout are not implemented. You supply the database, storage, and any external service accounts. Publishing this source does not include access to an existing hosted service or its ad archive.
