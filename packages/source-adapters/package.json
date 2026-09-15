@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "http-proxy-agent": "^9.1.0",
-    "https-proxy-agent": "^7.0.1",
+    "https-proxy-agent": "^9.1.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {
