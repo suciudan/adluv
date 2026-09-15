@@ -1,0 +1,29 @@
+{
+  "name": "@adluv/cdn",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo 'no tests for @adluv/cdn'"
+  },
+  "dependencies": {
+    "tsx": "^4.20.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "apps/cdn"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

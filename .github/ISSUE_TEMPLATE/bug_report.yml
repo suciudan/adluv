@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible problem with the source.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For sensitive security issues, follow SECURITY.md. Keep credentials, personal data, and private logs out of public reports.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the expected behavior and steps to reproduce with synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Commit, application, Node/Yarn versions, and operating system.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted errors or screenshots
+      description: Remove tokens, account information, and private service details.

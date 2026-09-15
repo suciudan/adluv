@@ -1,0 +1,23 @@
+.root {
+  font-family: var(--font-inter), sans-serif;
+  --homepage-shell: min(1200px, calc(100vw - 2rem));
+  background:
+    radial-gradient(circle at top, rgba(124, 58, 237, 0.16), transparent 28%),
+    linear-gradient(180deg, #0a0a0f 0%, #090910 38%, #07070c 100%);
+}
+
+.root h1,
+.root h2,
+.root h3 {
+  font-family: var(--font-instrument-serif), serif;
+  font-weight: 400;
+}
+
+.root :global(section) {
+  position: relative;
+}
+
+.root :global(::selection) {
+  background: rgba(124, 58, 237, 0.32);
+  color: #f7f5ff;
+}

@@ -1,0 +1,49 @@
+title = "Adluv secret scanning"
+
+[extend]
+useDefault = true
+
+# The built-in rules do not detect common proxy-list credentials.
+[[rules]]
+id = "authenticated-proxy-endpoint"
+description = "Credentials embedded in a host:port:username:password proxy entry"
+regex = '''(?i)\b(?:[a-z0-9-]+\.)+[a-z0-9-]+:\d{2,5}:[a-z0-9._~%+-]{4,}:[a-z0-9._~%+/-]{6,}'''
+
+[[rules.allowlists]]
+description = "Exact reserved-address proxy parser fixture"
+condition = "AND"
+paths = ['''(^|/)packages/source-adapters/src/proxy-list\.test\.ts$''']
+regexTarget = "match"
+regexes = ['''^198\.51\.100\.10:8000:user-one:pass-one$''']
+
+[[rules]]
+id = "credential-url"
+description = "Credentials embedded in a proxy or database URL"
+regex = '''(?i)\b(?:https?|socks(?:4a?|5h?)|mysql|postgres(?:ql)?|redis)://[a-z0-9._~%+-]{3,}:[^\s/@"'`$\{}]{6,}@(?:[a-z0-9-]+\.)*[a-z0-9-]+(?::\d{2,5})?'''
+
+[[rules.allowlists]]
+description = "Exact reserved-address proxy parser fixtures"
+condition = "AND"
+paths = ['''(^|/)packages/source-adapters/src/proxy-list\.test\.ts$''']
+regexTarget = "match"
+regexes = [
+  '''^http://user-one:pass-one@198\.51\.100\.10:8000$''',
+  '''^http://user-two:pass-two@proxy\.example:9000$''',
+]
+
+[[rules.allowlists]]
+description = "Proxy syntax documentation uses literal username/password placeholders"
+condition = "AND"
+paths = ['''(^|/)apps/proxy-lab/README\.md$''']
+regexTarget = "match"
+regexes = ['''^http://username:password@host$''']
+
+[[rules.allowlists]]
+description = "Exact development database URL placeholders"
+condition = "AND"
+paths = ['''(^|/)docs/Development\.md$''']
+regexTarget = "match"
+regexes = [
+  '''^mysql://adluv:YOUR_URL_ENCODED_PASSWORD@127\.0\.0\.1:3306$''',
+  '''^mysql://adluv_test:YOUR_URL_ENCODED_PASSWORD@127\.0\.0\.1:3306$''',
+]

@@ -1,0 +1,67 @@
+{
+  "name": "@adluv/worker",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth:provision-user": "tsx src/scripts/provision-auth-user.ts",
+    "build": "tsc -p tsconfig.json",
+    "backfill:ad-media-dimensions": "tsx src/scripts/backfill-ad-media-dimensions.ts",
+    "backfill:google-ad-ocr": "tsx src/scripts/backfill-google-ad-ocr.ts",
+    "backfill:google-image-ocr-cleanup": "tsx src/scripts/backfill-google-image-ocr-cleanup.ts",
+    "backfill:google-video-assets": "tsx src/scripts/backfill-google-video-assets.ts",
+    "backfill:landing-page-screenshots": "tsx src/scripts/backfill-landing-page-screenshots.ts",
+    "backfill:linkedin-ad-details": "tsx src/scripts/backfill-linkedin-ad-details.ts",
+    "backfill:linkedin-document-ads": "tsx src/scripts/backfill-linkedin-document-ads.ts",
+    "backfill:linkedin-text-ads": "tsx src/scripts/backfill-linkedin-text-ads.ts",
+    "backfill:meta-copy-normalization": "tsx src/scripts/backfill-meta-copy-normalization.ts",
+    "backfill:meta-creative-assets": "tsx src/scripts/backfill-meta-creative-assets.ts",
+    "backfill:meta-ended-ads": "tsx src/scripts/backfill-meta-ended-ads.ts",
+    "backfill:meta-variant-videos": "tsx src/scripts/backfill-meta-variant-videos.ts",
+    "backfill:advertiser-companies": "tsx src/scripts/backfill-advertiser-companies.ts",
+    "backfill:merge-duplicate-advertisers": "tsx src/scripts/backfill-merge-duplicate-advertisers.ts",
+    "backfill:advertiser-industries": "tsx src/scripts/backfill-advertiser-industries.ts",
+    "backfill:advertiser-logo-urls": "tsx src/scripts/backfill-advertiser-logo-urls.ts",
+    "backfill:cdn-asset-urls": "tsx src/scripts/backfill-cdn-asset-urls.ts",
+    "backfill:creative-binary-index": "tsx src/scripts/backfill-creative-binary-index.ts",
+    "backfill:google-brand-urls": "tsx src/scripts/backfill-google-brand-urls.ts",
+    "backfill:google-html-preview": "tsx src/scripts/backfill-google-html-preview.ts",
+    "dev": "tsx src/index.ts",
+    "migrate:image-assets-to-webp": "tsx src/scripts/migrate-image-assets-to-webp.ts",
+    "seed:initial-archive": "tsx src/scripts/seed-initial-archive.ts",
+    "sync:b2-assets": "tsx src/scripts/sync-b2-assets.ts",
+    "upsert:advertiser-alias": "tsx src/scripts/upsert-advertiser-search-alias.ts",
+    "start": "tsx src/index.ts",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test --test-concurrency=1 src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@adluv/auth": "workspace:*",
+    "@adluv/config": "workspace:*",
+    "@adluv/db": "workspace:*",
+    "@adluv/source-adapters": "workspace:*",
+    "@aws-sdk/client-s3": "^3.1026.0",
+    "ffmpeg-static": "^5.2.0",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.6",
+    "playwright": "^1.51.1",
+    "sharp": "^0.35.4",
+    "tesseract.js": "7.0.0",
+    "tsx": "^4.20.5",
+    "youtubei.js": "17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "apps/worker"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      TURBO_TELEMETRY_DISABLED: "1"
+      RUN_DB_INTEGRATION_TESTS: "0"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+      - name: Enable Yarn
+        run: corepack enable
+      - name: Install locked dependencies
+        run: yarn install --immutable
+      - name: Reject high and critical dependency advisories
+        run: yarn npm audit --all --recursive --severity high
+      - name: Test public export safeguards
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Unit tests
+        run: yarn test
+      - name: Lint
+        run: yarn lint
+      - name: Typecheck
+        run: yarn typecheck
+      - name: Production builds with synthetic configuration
+        run: yarn build
+        env:
+          # No database server or external account is used during compilation.
+          DATABASE_URL: mysql://build:build@127.0.0.1:1/adluv_build
+          BETTER_AUTH_SECRET: synthetic-build-only-auth-secret-at-least-32-characters
+          BETTER_AUTH_URL: http://localhost:3001
+          APP_URL: http://localhost:3001
+          NEXT_PUBLIC_APP_URL: http://localhost:3001
+          SITE_URL: http://localhost:3000
+          NEXT_PUBLIC_SITE_URL: http://localhost:3000
+          CMS_URL: http://localhost:3002
+          NEXT_PUBLIC_CMS_URL: http://localhost:3002
+          CDN_URL: http://localhost:3101
+          NEXT_PUBLIC_CDN_URL: http://localhost:3101
+          BREVO_API_KEY: synthetic-build-only
+          BREVO_WAITLIST_LIST_ID: "1"

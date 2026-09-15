@@ -1,0 +1,43 @@
+{
+  "name": "@adluv/proxy-lab",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "all": "tsx src/runners/all.ts",
+    "build": "tsc -p tsconfig.json",
+    "ip": "tsx src/runners/exit-ip.ts",
+    "ip:webscrapingapi": "tsx src/runners/webscrapingapi-proxy-ip.ts",
+    "ip:webshare": "PROXY_LAB_PROVIDER=webshare tsx src/runners/exit-ip.ts",
+    "google:rpc": "tsx src/runners/google-rpc.ts",
+    "google:rpc-429": "tsx src/runners/google-rpc-429.ts",
+    "google:rpc-proxy-check": "tsx src/runners/google-rpc-proxy-check.ts",
+    "google:rpc-webshare-check": "PROXY_LAB_PROVIDER=webshare tsx src/runners/google-rpc-proxy-check.ts",
+    "linkedin:http": "tsx src/runners/linkedin-http.ts",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "meta:graphql": "tsx src/runners/meta-graphql.ts",
+    "smoke": "tsx src/runners/smoke.ts",
+    "start": "tsx src/runners/all.ts",
+    "test": "echo 'no tests for @adluv/proxy-lab'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@adluv/config": "workspace:*",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.1",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "apps/proxy-lab"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

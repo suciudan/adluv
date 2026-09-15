@@ -1,0 +1,51 @@
+# Dependencies and build output
+node_modules/
+.next/
+dist/
+.turbo/
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# Yarn: retain the pinned release and source configuration
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/patches/
+!.yarn/versions/
+
+# Local credentials and runtime data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.sql.gz
+*.sql.zip
+**/cdn/storage/
+**/uploads/
+**/backups/
+**/dumps/
+apps/worker/sources/*proxies*.txt
+apps/proxy-lab/*proxies*.txt
+apps/proxy-lab/output/
+
+# Editor and agent state
+.idea/
+.vscode/
+.claude/
+.agents/
+.codex
+.playwright-mcp/
+.tmp/
+.DS_Store
+*:Zone.Identifier
+__pycache__/
+*.pyc

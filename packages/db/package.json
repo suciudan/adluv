@@ -1,0 +1,41 @@
+{
+  "name": "@adluv/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "db:migrate": "node ./scripts/migrate.mjs",
+    "db:check": "drizzle-kit check --config=drizzle.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:repair-migrations": "node ./scripts/repair-migration-journal.mjs",
+    "db:verify": "node ./scripts/verify-schema.mjs",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test --test-concurrency=1 src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@adluv/config": "workspace:*",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.2",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "packages/db"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

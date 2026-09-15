@@ -1,0 +1,3 @@
+# Local infrastructure is no longer managed from this repo.
+# Start MySQL separately if you need a local database for development.
+services: {}

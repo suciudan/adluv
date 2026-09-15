@@ -1,0 +1,88 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*",
+        "apps/*/.env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "dist/**",
+        "!.next/cache/**"
+      ],
+      "env": [
+        "APP_URL",
+        "AD_ASSET_CDN_URL",
+        "AUTH_COOKIE_DOMAIN",
+        "AUTH_COOKIE_SECURE",
+        "B2_APPLICATION_KEY",
+        "B2_APPLICATION_KEY_ID",
+        "B2_BUCKET_NAME",
+        "B2_ENDPOINT",
+        "CDN_HOST",
+        "CDN_PORT",
+        "CDN_URL",
+        "CRISP_IDENTITY_VERIFICATION_SECRET",
+        "CRISP_WEBSITE_ID",
+        "DATABASE_URL",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "CMS_URL",
+        "DISCORD_ERROR_WEBHOOK_URL",
+        "NEXT_PUBLIC_APP_URL",
+        "NEXT_PUBLIC_AD_ASSET_CDN_URL",
+        "NEXT_PUBLIC_CDN_URL",
+        "NEXT_PUBLIC_CMS_URL",
+        "NEXT_PUBLIC_SITE_URL",
+        "RESEND_API_KEY",
+        "RESEND_FROM",
+        "SITE_URL",
+        "ACTIVE_AD_STATUS_CHECK_CADENCE_HOURS",
+        "SYNC_CADENCE_MINUTES",
+        "SYNC_SCHEDULER_POLL_SECONDS",
+        "WEBSCRAPINGAPI_API_KEY",
+        "CDN_STORAGE_ROOT",
+        "NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN",
+        "NEXT_PUBLIC_POSTHOG_HOST",
+        "BREVO_API_KEY",
+        "BREVO_WAITLIST_LIST_ID",
+        "DISCORD_WAITLIST_WEBHOOK_URL",
+        "GTM_CONTAINER_ID"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "typecheck": {
+      "dependsOn": [
+        "^typecheck"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ],
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "serve": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

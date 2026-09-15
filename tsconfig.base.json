@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@adluv/auth": ["packages/auth/src"],
+      "@adluv/config": ["packages/config/src"],
+      "@adluv/config/*": ["packages/config/src/*"],
+      "@adluv/db": ["packages/db/src"],
+      "@adluv/source-adapters": ["packages/source-adapters/src"],
+      "@adluv/ui": ["packages/ui/src"]
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1773410400289,
+      "tag": "0000_uneven_sprite",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1773424690111,
+      "tag": "0001_misty_colleen_wing",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1773426154356,
+      "tag": "0002_outgoing_cerebro",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1773438000000,
+      "tag": "0003_sturdy_ad_intel",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1773439800000,
+      "tag": "0004_bright_mimic",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1773440700000,
+      "tag": "0005_swipe_file_collections",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1773441300000,
+      "tag": "0006_notification_inbox_and_digest",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1773441900000,
+      "tag": "0007_notification_digest_cursor",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1773442500000,
+      "tag": "0008_advertiser_logo",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1773673027760,
+      "tag": "0009_tracker_notifications",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1773736200000,
+      "tag": "0010_google_source",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1773939600000,
+      "tag": "0011_advertiser_search_aliases",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1773939900000,
+      "tag": "0012_blog_media_manager",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1774722000000,
+      "tag": "0013_blog_author_avatar_label_128",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1775908800000,
+      "tag": "0014_mcp_api_keys",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1776204000000,
+      "tag": "0015_mcp_oauth",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "5",
+      "when": 1776211200000,
+      "tag": "0016_remove_mcp_api_keys",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "5",
+      "when": 1776297600000,
+      "tag": "0017_advertiser_search_cache",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "5",
+      "when": 1776384000000,
+      "tag": "0018_advertiser_search_query_companies",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "5",
+      "when": 1776556800000,
+      "tag": "0019_advertiser_companies",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "5",
+      "when": 1777939200000,
+      "tag": "0020_workspaces",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "5",
+      "when": 1778515200000,
+      "tag": "0021_oauth_application_auth_scheme_default",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "5",
+      "when": 1778518800000,
+      "tag": "0022_verification_value_text",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "5",
+      "when": 1781568000000,
+      "tag": "0023_auth_user_last_seen",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "5",
+      "when": 1781654400000,
+      "tag": "0024_notification_monthly_digest",
+      "breakpoints": true
+    }
+  ]
+}

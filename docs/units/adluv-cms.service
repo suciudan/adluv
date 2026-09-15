@@ -1,0 +1,16 @@
+[Unit]
+Description=AdLuv cms
+After=network.target
+
+[Service]
+Type=simple
+User=adluv
+Group=adluv
+WorkingDirectory=/srv/adluv
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/adluv/adluv.env
+ExecStart=/usr/bin/yarn workspace @adluv/cms start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

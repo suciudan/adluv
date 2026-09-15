@@ -1,0 +1,81 @@
+{
+  "name": "adluv",
+  "private": true,
+  "packageManager": "yarn@4.13.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "auth:provision-user": "yarn workspace @adluv/worker auth:provision-user",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "app": "turbo run dev --parallel --filter=@adluv/app --filter=@adluv/cdn",
+    "cms": "turbo run dev --parallel --filter=@adluv/cms",
+    "mcp": "yarn workspace @adluv/mcp dev",
+    "mcp:serve": "yarn workspace @adluv/mcp serve",
+    "proxy-lab": "yarn workspace @adluv/proxy-lab all",
+    "proxy-lab:google": "yarn workspace @adluv/proxy-lab google:rpc",
+    "proxy-lab:google-rpc-429": "yarn workspace @adluv/proxy-lab google:rpc-429",
+    "proxy-lab:google-rpc-check": "yarn workspace @adluv/proxy-lab google:rpc-proxy-check",
+    "proxy-lab:google-rpc-webshare-check": "yarn workspace @adluv/proxy-lab google:rpc-webshare-check",
+    "proxy-lab:ip": "yarn workspace @adluv/proxy-lab ip",
+    "proxy-lab:ip:webscrapingapi": "yarn workspace @adluv/proxy-lab ip:webscrapingapi",
+    "proxy-lab:ip:webshare": "PROXY_LAB_PROVIDER=webshare yarn workspace @adluv/proxy-lab ip",
+    "proxy-lab:linkedin": "yarn workspace @adluv/proxy-lab linkedin:http",
+    "proxy-lab:meta": "yarn workspace @adluv/proxy-lab meta:graphql",
+    "proxy-lab:smoke": "yarn workspace @adluv/proxy-lab smoke",
+    "site": "turbo run dev --parallel --filter=@adluv/site",
+    "db:generate": "yarn workspace @adluv/db db:generate",
+    "db:migrate": "yarn workspace @adluv/db db:migrate",
+    "db:check": "yarn workspace @adluv/db db:check",
+    "db:repair-migrations": "yarn workspace @adluv/db db:repair-migrations",
+    "db:verify": "yarn workspace @adluv/db db:verify",
+    "cdn": "yarn workspace @adluv/cdn dev",
+    "services:up": "printf 'No local Docker services are managed by this repo. Start a local MySQL instance separately and point DATABASE_URL at it.\\n'",
+    "services:down": "printf 'No local Docker services are managed by this repo.\\n'",
+    "db:push": "yarn workspace @adluv/db db:push",
+    "deploy:preflight": "yarn db:check && yarn typecheck && yarn build",
+    "lint": "turbo run lint",
+    "backfill:ad-media-dimensions": "yarn workspace @adluv/worker backfill:ad-media-dimensions",
+    "backfill:landing-page-screenshots": "yarn workspace @adluv/worker backfill:landing-page-screenshots",
+    "backfill:google-ad-ocr": "yarn workspace @adluv/worker backfill:google-ad-ocr",
+    "backfill:google-image-ocr-cleanup": "yarn workspace @adluv/worker backfill:google-image-ocr-cleanup",
+    "backfill:google-video-assets": "yarn workspace @adluv/worker backfill:google-video-assets",
+    "backfill:linkedin-ad-details": "yarn workspace @adluv/worker backfill:linkedin-ad-details",
+    "backfill:linkedin-document-ads": "yarn workspace @adluv/worker backfill:linkedin-document-ads",
+    "backfill:linkedin-text-ads": "yarn workspace @adluv/worker backfill:linkedin-text-ads",
+    "backfill:meta-copy-normalization": "yarn workspace @adluv/worker backfill:meta-copy-normalization",
+    "backfill:meta-creative-assets": "yarn workspace @adluv/worker backfill:meta-creative-assets",
+    "backfill:meta-ended-ads": "yarn workspace @adluv/worker backfill:meta-ended-ads",
+    "backfill:meta-variant-videos": "yarn workspace @adluv/worker backfill:meta-variant-videos",
+    "backfill:merge-duplicate-advertisers": "yarn workspace @adluv/worker backfill:merge-duplicate-advertisers",
+    "migrate:ad-images-to-webp": "yarn workspace @adluv/worker migrate:image-assets-to-webp",
+    "migrate:ad-media-assets": "yarn workspace @adluv/worker migrate:image-assets-to-webp",
+    "seed:initial-archive": "yarn workspace @adluv/worker seed:initial-archive",
+    "test": "turbo run test",
+    "test:e2e": "playwright test",
+    "test:release": "yarn test && yarn test:e2e",
+    "typecheck": "turbo run typecheck",
+    "worker": "yarn workspace @adluv/worker dev",
+    "web": "yarn app"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.6.1",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  },
+  "description": "Self-hosted ad intelligence for Meta, Google, and LinkedIn."
+}

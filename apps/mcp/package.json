@@ -1,0 +1,37 @@
+{
+  "name": "@adluv/mcp",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "login": "tsx src/index.ts login",
+    "logout": "tsx src/index.ts logout",
+    "serve": "tsx src/index.ts serve",
+    "start": "tsx src/index.ts",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test --test-concurrency=1 src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@adluv/auth": "workspace:*",
+    "@adluv/config": "workspace:*",
+    "@adluv/db": "workspace:*",
+    "@adluv/source-adapters": "workspace:*",
+    "tsx": "^4.20.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "apps/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@adluv/app",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "yarn@4.13.0",
+  "scripts": {
+    "build": "next build --webpack",
+    "lint": "eslint . --ignore-pattern .next --ignore-pattern next-env.d.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "next dev --turbopack -p 3001",
+    "start": "next start -p 3001",
+    "test": "tsx --import ../../tests/unit-env.ts --test --test-concurrency=1 app/**/*.test.ts lib/**/*.test.ts"
+  },
+  "dependencies": {
+    "@adluv/auth": "workspace:*",
+    "@adluv/config": "workspace:*",
+    "@adluv/db": "workspace:*",
+    "@adluv/source-adapters": "workspace:*",
+    "@adluv/ui": "workspace:*",
+    "better-auth": "~1.6.33",
+    "lucide-react": "^0.525.0",
+    "motion": "^12.23.24",
+    "next": "16.3.5",
+    "posthog-js": "^1.372.10",
+    "posthog-node": "^5.33.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "16.3.5",
+    "tailwindcss": "^4.1.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suciudan/adluv.git",
+    "directory": "apps/app"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/adluv/issues"
+  }
+}

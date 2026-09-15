@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "../.."
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../packages/auth/src/**/*.ts",
+    "../../packages/config/src/**/*.ts",
+    "../../packages/db/src/**/*.ts",
+    "../../packages/source-adapters/src/**/*.ts"
+  ],
+  "exclude": [
+    "src/scripts/**/*.ts"
+  ]
+}
