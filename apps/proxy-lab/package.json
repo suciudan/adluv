@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@adluv/config": "workspace:*",
-    "http-proxy-agent": "^7.0.2",
+    "http-proxy-agent": "^9.1.0",
     "https-proxy-agent": "^7.0.1",
     "tsx": "^4.21.0"
   },
