@@ -12,8 +12,8 @@
     "test": "tsx --test --test-concurrency=1 src/**/*.test.ts"
   },
   "dependencies": {
-    "http-proxy-agent": "^7.0.2",
-    "https-proxy-agent": "^7.0.1",
+    "http-proxy-agent": "^9.1.0",
+    "https-proxy-agent": "^9.1.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {
