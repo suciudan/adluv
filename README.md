@@ -8,6 +8,26 @@ Ad intelligence for discovering, tracking, and organizing ads across LinkedIn, M
 
 This repository contains the application source for running your own instance. Accounts are provisioned by an operator; public signup and checkout are not implemented. You supply the database, storage, and any external service accounts. Publishing this source does not include access to an existing hosted service or its ad archive.
 
+## Screenshots
+
+### Ad library
+
+Browse ad creatives and filter by network, watchlist, or impressions.
+
+![AdLuv ad library with creative cards and filtering controls](docs/assets/screenshots/ad-library.jpg)
+
+### Advertiser overview
+
+Review an advertiser's active ads, platforms, and launch activity.
+
+![AdLuv advertiser overview with summary metrics and activity history](docs/assets/screenshots/advertiser-overview.jpg)
+
+### Ad details
+
+Inspect a creative alongside its run dates, format, impressions, and delivery countries.
+
+![AdLuv ad details with a creative preview and delivery information](docs/assets/screenshots/ad-details.jpg)
+
 ## What's included
 
 | Workspace | Purpose |
