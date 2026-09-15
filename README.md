@@ -14,19 +14,19 @@ This repository contains the application source for running your own instance. A
 
 Browse ad creatives and filter by network, watchlist, or impressions.
 
-![AdLuv ad library with creative cards and filtering controls](docs/assets/screenshots/ad-library.jpg)
+![AdLuv ad library with creative cards and filtering controls](docs/assets/screenshots/ad-library.png)
 
 ### Advertiser overview
 
 Review an advertiser's active ads, platforms, and launch activity.
 
-![AdLuv advertiser overview with summary metrics and activity history](docs/assets/screenshots/advertiser-overview.jpg)
+![AdLuv advertiser overview with summary metrics and activity history](docs/assets/screenshots/advertiser-overview.png)
 
 ### Ad details
 
 Inspect a creative alongside its run dates, format, impressions, and delivery countries.
 
-![AdLuv ad details with a creative preview and delivery information](docs/assets/screenshots/ad-details.jpg)
+![AdLuv ad details with a creative preview and delivery information](docs/assets/screenshots/ad-details.png)
 
 ## What's included
 
