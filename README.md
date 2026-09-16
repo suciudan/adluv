@@ -8,6 +8,10 @@ Ad intelligence for discovering, tracking, and organizing ads across LinkedIn, M
 
 This repository contains the application source for running your own instance. Accounts are provisioned by an operator; public signup and checkout are not implemented. You supply the database, storage, and any external service accounts. Publishing this source does not include access to an existing hosted service or its ad archive.
 
+## People behind AdLuv
+
+AdLuv was a collaboration between [Jack Oldham](https://www.linkedin.com/in/jackoldham/) on marketing and [Dan Suciu](https://github.com/suciudan) on technical development.
+
 ## Screenshots
 
 ### Ad library
