@@ -63,7 +63,7 @@
   "devDependencies": {
     "@playwright/test": "^1.51.1",
     "tsx": "^4.21.0",
-    "turbo": "^2.6.1",
+    "turbo": "^2.11.2",
     "typescript": "^5.8.2"
   },
   "engines": {
