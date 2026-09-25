@@ -1,6 +1,6 @@
 # Dependency audit
 
-Checked on **2026-09-15** with Node.js 24.15.0 and Yarn 4.13.0 against the committed lockfile.
+Checked on **2026-09-25** with Node.js 24.15.0 and Yarn 4.13.0 against the committed lockfile.
 
 ## Result
 
@@ -17,7 +17,7 @@ The esbuild issue affects its own development server: another website can read r
 
 ## Compatibility choices
 
-The lockfile includes Next.js and `eslint-config-next` 16.3.5, React and React DOM 19.3.0, Motion 13.2.0, Drizzle ORM 0.45.2, `next-mdx-remote` 6.0.0, and Sharp 0.35.4.
+The lockfile includes Next.js and `eslint-config-next` 16.3.5, React and React DOM 19.3.0, Motion 13.4.0, Drizzle ORM 0.45.2, `next-mdx-remote` 6.0.0, and Sharp 0.35.4.
 
 Better Auth is constrained to **`~1.6.33`**. The application currently uses its legacy `mcp` plugin and OAuth database tables; Better Auth 1.7 removes that plugin. Updating to 1.7 requires an explicit migration to the newer OAuth provider with database and login-flow validation. The selected 1.6 release includes the [refresh-token authentication fix](https://github.com/advisories/GHSA-pw9m-5jxm-xr6h), and the registry audit reports no current Better Auth findings for it.
 
@@ -31,7 +31,7 @@ Routine version updates have three constraints in [.github/dependabot.yml](../.g
 
 | Dependency | Supported line | Requirement before lifting the constraint |
 | --- | --- | --- |
-| `@types/node` | 24.x (24.13.4 currently) | Upgrade the Node 24 runtime contract in `.nvmrc`, `package.json`, deployment documentation, and CI together. Node 26 declarations can expose APIs absent from the supported runtime. |
+| `@types/node` | 24.x (24.13.6 currently) | Upgrade the Node 24 runtime contract in `.nvmrc`, `package.json`, deployment documentation, and CI together. Node 26 declarations can expose APIs absent from the supported runtime. |
 | `eslint` | 9.x (9.39.5 currently) | Wait for compatible Next.js React and accessibility plugins, then rerun the full lint suite. ESLint 10.10.0 currently crashes in `react/display-name` because the plugin calls the removed `context.getFilename()` API. Track [eslint-plugin-react #3977](https://github.com/jsx-eslint/eslint-plugin-react/issues/3977). |
 | `better-auth` | 1.6.x (1.6.33 currently) | Follow the [1.7 migration guide](https://better-auth.com/docs/guides/1-7-upgrade-guide), replace the removed MCP plugin and legacy OAuth tables/endpoints, and verify provisioning, sign-in, consent, token exchange, and existing-data migration. The unmodified 1.7.4 update crashes on `mcp()` during app tests. |
 
@@ -48,4 +48,6 @@ yarn npm audit --all --recursive --severity high
 
 The full audit exits unsuccessfully while the moderate entries remain. CI uses the second audit command to reject high and critical advisories. Registry results can change after this dated review.
 
-Local validation of this lockfile included 71 passing unit tests with one database integration test skipped, all 12 workspace typechecks and builds, and all 11 lint tasks. Lint still reports existing warnings. Builds used synthetic configuration and did not require external accounts. These checks do not validate every browser flow, live advertising provider, email delivery, or object-storage integration.
+The September 25 updates include Motion 13.4.0, Lucide React 1.47.0, Turbo 2.11.2, Marked 18.0.13, and Node 24.13.6 type declarations. Local validation passed an immutable install and focused runtime checks: all 89 imported Lucide icons and seven Motion marketing components rendered on the server, and eight CMS Markdown normalization cases passed using the actual editor functions.
+
+The required CI workflow also checks the high/critical audit, public-export tests, unit tests, lint, typechecks, and production builds using synthetic configuration. Database integration tests are disabled in CI. These checks do not validate every browser flow, live advertising provider, email delivery, or object-storage integration.

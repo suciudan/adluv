@@ -52,7 +52,7 @@
     "youtubei.js": "18.0.0"
   },
   "devDependencies": {
-    "@types/node": "^24.3.0",
+    "@types/node": "^24.13.6",
     "typescript": "^5.8.2"
   },
   "license": "MIT",
