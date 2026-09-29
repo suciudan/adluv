@@ -19,7 +19,7 @@
     "@adluv/config": "workspace:*",
     "@adluv/db": "workspace:*",
     "@adluv/source-adapters": "workspace:*",
-    "tsx": "^4.20.5"
+    "tsx": "^4.23.15"
   },
   "devDependencies": {
     "@types/node": "^24.13.6",

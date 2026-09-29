@@ -11,7 +11,7 @@
     "test": "echo 'no tests for @adluv/cdn'"
   },
   "dependencies": {
-    "tsx": "^4.20.5"
+    "tsx": "^4.23.15"
   },
   "devDependencies": {
     "@types/node": "^24.13.6",

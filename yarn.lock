@@ -29,7 +29,7 @@ __metadata:
     react: "npm:19.3.0"
     react-dom: "npm:19.3.0"
     tailwindcss: "npm:^4.1.11"
-    tsx: "npm:^4.21.0"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
     zod: "npm:^4.1.11"
   languageName: unknown
@@ -50,7 +50,7 @@ __metadata:
   resolution: "@adluv/cdn@workspace:apps/cdn"
   dependencies:
     "@types/node": "npm:^24.13.6"
-    tsx: "npm:^4.20.5"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
   languageName: unknown
   linkType: soft
@@ -107,7 +107,7 @@ __metadata:
     drizzle-kit: "npm:^0.31.4"
     drizzle-orm: "npm:^0.45.2"
     mysql2: "npm:^3.15.3"
-    tsx: "npm:^4.21.0"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
   languageName: unknown
   linkType: soft
@@ -121,7 +121,7 @@ __metadata:
     "@adluv/db": "workspace:*"
     "@adluv/source-adapters": "workspace:*"
     "@types/node": "npm:^24.13.6"
-    tsx: "npm:^4.20.5"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
   languageName: unknown
   linkType: soft
@@ -134,7 +134,7 @@ __metadata:
     "@types/node": "npm:^24.13.6"
     http-proxy-agent: "npm:^9.1.0"
     https-proxy-agent: "npm:^9.1.0"
-    tsx: "npm:^4.21.0"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
   languageName: unknown
   linkType: soft
@@ -173,7 +173,7 @@ __metadata:
   dependencies:
     http-proxy-agent: "npm:^9.1.0"
     https-proxy-agent: "npm:^9.1.0"
-    tsx: "npm:^4.21.0"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
     zod: "npm:^4.1.11"
   languageName: unknown
@@ -206,7 +206,7 @@ __metadata:
     playwright: "npm:^1.51.1"
     sharp: "npm:^0.35.4"
     tesseract.js: "npm:7.0.0"
-    tsx: "npm:^4.20.5"
+    tsx: "npm:^4.23.15"
     typescript: "npm:^5.8.2"
     youtubei.js: "npm:18.0.0"
   languageName: unknown
@@ -3169,7 +3169,7 @@ __metadata:
   resolution: "adluv@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.51.1"
-    tsx: "npm:^4.21.0"
+    tsx: "npm:^4.23.15"
     turbo: "npm:^2.11.2"
     typescript: "npm:^5.8.2"
   languageName: unknown
@@ -8593,7 +8593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.20.5, tsx@npm:^4.21.0":
+"tsx@npm:^4.21.0":
   version: 4.23.13
   resolution: "tsx@npm:4.23.13"
   dependencies:
@@ -8605,6 +8605,21 @@ __metadata:
   bin:
     tsx: dist/cli.mjs
   checksum: 10c0/dc99c8988b42ec2443963a0b9051f42d068bc7e2a44e82f3b94b40539a991c5c01ea3ee049cf317d1040b2245711dd4c64ace9ac875f3b07edee29f610702e3c
+  languageName: node
+  linkType: hard
+
+"tsx@npm:^4.23.15":
+  version: 4.23.15
+  resolution: "tsx@npm:4.23.15"
+  dependencies:
+    esbuild: "npm:~0.28.0"
+    fsevents: "npm:~2.3.3"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    tsx: dist/cli.mjs
+  checksum: 10c0/3c5fc53e578da87d3a63565286b1ecbb0e01b9bb646daec1957294ef890d14f22cc67bb4b09b5daffab0e7ce0217b1e7645393feb0f524b1ddf26ae9595d7e75
   languageName: node
   linkType: hard
 
