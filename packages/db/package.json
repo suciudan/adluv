@@ -26,7 +26,7 @@
   "devDependencies": {
     "@types/node": "^24.13.6",
     "drizzle-kit": "^0.31.4",
-    "tsx": "^4.21.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.8.2"
   },
   "license": "MIT",
