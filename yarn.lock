@@ -15,7 +15,7 @@ __metadata:
     "@adluv/source-adapters": "workspace:*"
     "@adluv/ui": "workspace:*"
     "@tailwindcss/postcss": "npm:^4.1.11"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     "@types/react": "npm:^19.1.10"
     "@types/react-dom": "npm:^19.1.7"
     better-auth: "npm:~1.6.33"
@@ -49,7 +49,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@adluv/cdn@workspace:apps/cdn"
   dependencies:
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.8.2"
   languageName: unknown
@@ -69,7 +69,7 @@ __metadata:
     "@tiptap/pm": "npm:^3.21.0"
     "@tiptap/react": "npm:^3.21.0"
     "@tiptap/starter-kit": "npm:^3.21.0"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     "@types/react": "npm:^19.1.10"
     "@types/react-dom": "npm:^19.1.7"
     better-auth: "npm:~1.6.33"
@@ -102,7 +102,7 @@ __metadata:
   resolution: "@adluv/db@workspace:packages/db"
   dependencies:
     "@adluv/config": "workspace:*"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     dotenv: "npm:^17.2.3"
     drizzle-kit: "npm:^0.31.4"
     drizzle-orm: "npm:^0.45.2"
@@ -120,7 +120,7 @@ __metadata:
     "@adluv/config": "workspace:*"
     "@adluv/db": "workspace:*"
     "@adluv/source-adapters": "workspace:*"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.8.2"
   languageName: unknown
@@ -131,7 +131,7 @@ __metadata:
   resolution: "@adluv/proxy-lab@workspace:apps/proxy-lab"
   dependencies:
     "@adluv/config": "workspace:*"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     http-proxy-agent: "npm:^9.1.0"
     https-proxy-agent: "npm:^9.1.0"
     tsx: "npm:^4.21.0"
@@ -148,7 +148,7 @@ __metadata:
     "@adluv/db": "workspace:*"
     "@adluv/ui": "workspace:*"
     "@tailwindcss/postcss": "npm:^4.1.11"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     "@types/react": "npm:^19.1.10"
     "@types/react-dom": "npm:^19.1.7"
     better-auth: "npm:~1.6.33"
@@ -199,7 +199,7 @@ __metadata:
     "@adluv/db": "workspace:*"
     "@adluv/source-adapters": "workspace:*"
     "@aws-sdk/client-s3": "npm:^3.1026.0"
-    "@types/node": "npm:^24.13.6"
+    "@types/node": "npm:^24.19.0"
     ffmpeg-static: "npm:^5.2.0"
     http-proxy-agent: "npm:^9.1.0"
     https-proxy-agent: "npm:^9.1.0"
@@ -2784,12 +2784,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.13.6":
-  version: 24.13.6
-  resolution: "@types/node@npm:24.13.6"
+"@types/node@npm:^24.19.0":
+  version: 24.19.0
+  resolution: "@types/node@npm:24.19.0"
   dependencies:
-    undici-types: "npm:~7.18.0"
-  checksum: 10c0/b6302b2ede891e3a583a6e9c75390e8bc0fb8a99ea81c61ed029c244426550f1508ebae4ba1acf32840fb22a7df461f1e87b449043a8f906240b31a090866c1a
+    undici-types: "npm:>=7.24.0 <7.24.7"
+  checksum: 10c0/f38afca05eb323a01243aa06a4cb8e69ef3423e1115e4464a211c6556156c024bb80fadeb7e3691802a247e7e653b70bad8c528b291153e4f48fccecc6159735
   languageName: node
   linkType: hard
 
@@ -8753,10 +8753,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~7.18.0":
-  version: 7.18.2
-  resolution: "undici-types@npm:7.18.2"
-  checksum: 10c0/85a79189113a238959d7a647368e4f7c5559c3a404ebdb8fc4488145ce9426fcd82252a844a302798dfc0e37e6fb178ff481ed03bc4caf634c5757d9ef43521d
+"undici-types@npm:>=7.24.0 <7.24.7":
+  version: 7.24.6
+  resolution: "undici-types@npm:7.24.6"
+  checksum: 10c0/d9cd8befb643ac904615c280a095ba4240531f6bb4a5e75a22a7483630ca8d3f1016d2ab6ace6ceda1f63b3a2db2fe037fafe121d6917a0187573aa548ff78ca
   languageName: node
   linkType: hard
 
