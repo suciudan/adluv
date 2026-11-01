@@ -17,7 +17,7 @@
     "@adluv/db": "workspace:*",
     "@adluv/source-adapters": "workspace:*",
     "@adluv/ui": "workspace:*",
-    "better-auth": "~1.6.33",
+    "better-auth": "~1.7.7",
     "lucide-react": "^1.47.0",
     "motion": "^13.4.0",
     "next": "16.3.5",
