@@ -31,7 +31,7 @@ __metadata:
     tailwindcss: "npm:^4.1.11"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.8.2"
-    zod: "npm:^4.1.11"
+    zod: "npm:^4.6.6"
   languageName: unknown
   linkType: soft
 
@@ -41,7 +41,7 @@ __metadata:
   dependencies:
     "@adluv/db": "workspace:*"
     typescript: "npm:^5.8.2"
-    zod: "npm:^4.1.11"
+    zod: "npm:^4.6.6"
   languageName: unknown
   linkType: soft
 
@@ -84,7 +84,7 @@ __metadata:
     remark-gfm: "npm:^4.0.1"
     tailwindcss: "npm:^4.1.11"
     typescript: "npm:^5.8.2"
-    zod: "npm:^4.1.11"
+    zod: "npm:^4.6.6"
   languageName: unknown
   linkType: soft
 
@@ -175,7 +175,7 @@ __metadata:
     https-proxy-agent: "npm:^9.1.0"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.8.2"
-    zod: "npm:^4.1.11"
+    zod: "npm:^4.6.6"
   languageName: unknown
   linkType: soft
 
@@ -9187,10 +9187,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.1.11, zod@npm:^4.3.6":
+"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.3.6":
   version: 4.6.5
   resolution: "zod@npm:4.6.5"
   checksum: 10c0/32eb6c5e98becbe045675b2141c3611451c16ba567f9779231d79af41c4d651ca1c22f154aef7e6c6e77b929f23e43f1154ca05b82e119e922353725d6776af5
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.6.6":
+  version: 4.6.6
+  resolution: "zod@npm:4.6.6"
+  checksum: 10c0/447a3113bb743c54ab839213ff95e9e8c197cc1206f65270c18aac35aa70c47a5c8cab753be911b574df9a8a9801ea74ed6be776575232cae0084e51dab3e970
   languageName: node
   linkType: hard
 
