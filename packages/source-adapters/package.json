@@ -14,7 +14,7 @@
   "dependencies": {
     "http-proxy-agent": "^9.1.0",
     "https-proxy-agent": "^9.1.0",
-    "zod": "^4.1.11"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "tsx": "^4.21.0",
